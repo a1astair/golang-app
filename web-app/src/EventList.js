@@ -34,7 +34,9 @@ function EventList() {
   } else {
     return (
       <Card.Group>
-        {items.map(item => (
+        {items
+        .sort((a, b) => parseInt(a.ID) > parseInt(b.ID) ? 1 : -1)
+        .map(item => (
           <Card fluid key={item.ID}>
             <Card.Content>
               ID: {item.ID}

@@ -47,7 +47,7 @@ function GetOneEvent() {
   }
     return (
       <div>
-        <Header as='h2'>Get one Eventt</Header>
+        <Header as='h2'>Get one Event</Header>
         <Form>
           <Form.Group widths='equal'>
             <Form.Input type='number' fluid label='ID' placeholder='ID' onChange={e => setID(e.target.value)} />
