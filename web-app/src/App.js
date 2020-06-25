@@ -5,21 +5,41 @@ import AddEvent from "./AddEvent"
 import GetOneEvent from "./GetOneEvent"
 import UpdateEvent from "./UpdateEvent"
 import DeleteEvent from "./DeleteEvent"
-import { Container } from 'semantic-ui-react';
+import { Container, Divider, Segment, Grid } from 'semantic-ui-react';
 function App() {
   return (
     <Container>
-      <br/>
-      <PageHeader/>
-      <EventList/>
-      <br/>
-      <AddEvent/>
-      <br/>
-      <GetOneEvent/>
-      <br/>
-      <UpdateEvent/>
-      <br/>
-      <DeleteEvent/>
+      <Divider hidden />
+      <PageHeader />
+      <Segment padded>
+        <Divider hidden />
+        <Grid columns={2} relaxed='very' stackable>
+          <Grid.Column>
+            <EventList />
+          </Grid.Column>
+          {/* <Divider vertical /> */}
+          <Grid.Column>
+            <GetOneEvent />
+          </Grid.Column>
+        </Grid>
+      </Segment>
+      <Divider hidden />
+      <Segment padded>
+      <Divider hidden />
+        <Grid columns={2} relaxed='very' stackable>
+          <Grid.Column>
+            <AddEvent />
+          </Grid.Column>
+          {/* <Divider vertical /> */}
+          <Grid.Column>
+            <UpdateEvent />
+          </Grid.Column>
+        </Grid>
+      </Segment>
+      <Divider hidden />
+      <Segment padded>
+      <DeleteEvent />
+      </Segment>
     </Container>
   );
 }

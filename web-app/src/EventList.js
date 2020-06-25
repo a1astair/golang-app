@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card } from 'semantic-ui-react'
+import { Card, Header } from 'semantic-ui-react'
 import { apiRoot } from './config'
 function EventList() {
   const [error, setError] = useState(null);
@@ -33,21 +33,24 @@ function EventList() {
     return <div>Loading...</div>;
   } else {
     return (
+      <div>
+        <Header as='h2'>Event List</Header>
       <Card.Group>
         {items
         .sort((a, b) => parseInt(a.ID) > parseInt(b.ID) ? 1 : -1)
         .map(item => (
           <Card fluid key={item.ID}>
             <Card.Content>
-              ID: {item.ID}
+              ID: <strong>{item.ID}</strong> 
               <br/>
-              Title: <strong>{item.Title}</strong> 
+              Title: {item.Title}
               <br/>
               Description: {item.Description}
             </Card.Content>
           </Card>
         ))}
       </Card.Group>
+        </div>
     );
   }
 }

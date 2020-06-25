@@ -64,10 +64,10 @@ function GetOneEvent() {
           )}
           {event && (
             <div>
-            <h3>Event Info!</h3>
-            <p>{event.ID}</p>
-            <p>{event.Title}</p>
-            <p>{event.Description}</p>
+            <h3>Event Info</h3>
+            <p>ID: <strong>{event.ID}</strong></p>
+            <p>Title: {event.Title}</p>
+            <p>Description: {event.Description}</p>
             </div>
             )}
         </Form>
