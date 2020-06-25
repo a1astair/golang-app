@@ -35,7 +35,7 @@ function EventList() {
     return (
       <div>
         <Header as='h2'>Event List</Header>
-      <Card.Group>
+      <Card.Group >
         {items
         .sort((a, b) => parseInt(a.ID) > parseInt(b.ID) ? 1 : -1)
         .map(item => (

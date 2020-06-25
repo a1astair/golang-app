@@ -1,3 +1,4 @@
 web-app/node_modules
 .DS_Store
 go-api/main
+web-app/build/*

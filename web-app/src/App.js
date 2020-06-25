@@ -11,6 +11,7 @@ function App() {
     <Container>
       <Divider hidden />
       <PageHeader />
+      <Divider hidden />
       <Segment padded>
         <Divider hidden />
         <Grid columns={2} relaxed='very' stackable>
